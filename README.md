@@ -23,6 +23,10 @@ Reference the module in your app.
 
 ## Release History
 
+__0.1.1__
+
+  * Added main property to bower.json.
+
 __0.1.0__
 
   * Added basic Modernizr service as well as cssTransform and cssTransition decorators.

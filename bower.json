@@ -1,6 +1,6 @@
 {
   "name": "angular-modular-modernizr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "homepage": "https://github.com/sullinger/angular-modular-modernizr",
   "authors": [
     "Stefan Ullinger <stefan@slicemenice.de>"
@@ -11,6 +11,9 @@
     "Modernizr"
   ],
   "license": "MIT",
+  "main": [
+    "sources/**/*"
+  ],
   "ignore": [
     "**/.*",
     "node_modules",
