@@ -1,5 +1,5 @@
 (function() {
 
-	anuglar.module( 'angularModularModernizr', [] );
+	angular.module( 'angularModularModernizr', [] );
 
 })();
