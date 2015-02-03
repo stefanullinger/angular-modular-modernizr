@@ -1,0 +1,5 @@
+(function() {
+
+	anuglar.module( 'angularModularModernizr', [] );
+
+})();

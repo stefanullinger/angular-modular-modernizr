@@ -1,0 +1,21 @@
+{
+  "name": "angular-modular-modernizr",
+  "version": "0.1.0",
+  "homepage": "https://github.com/sullinger/angular-modular-modernizr",
+  "authors": [
+    "Stefan Ullinger <stefan@slicemenice.de>"
+  ],
+  "description": "AngularJS based Modernizr service that let's you decide which checks to include.",
+  "keywords": [
+    "AngularJS",
+    "Modernizr"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
