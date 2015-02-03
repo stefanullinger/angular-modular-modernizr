@@ -23,6 +23,10 @@ Reference the module in your app.
 
 ## Release History
 
+__0.1.2__
+
+  * Set module file as first file in main property of bower.json.
+
 __0.1.1__
 
   * Added main property to bower.json.
