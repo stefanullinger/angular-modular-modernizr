@@ -23,6 +23,10 @@ Reference the module in your app.
 
 ## Release History
 
+__0.3.2__
+
+  * Fixed code to add classes to the document for each supported feature.
+
 __0.3.1__
 
   * Fixed supportsTouch in touch decorator.

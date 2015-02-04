@@ -26,7 +26,8 @@
 		// ****************
 		// Initialization
 		// ****************
-		$document.addClass( ( $delegate.supportsCssTransitions ? '' : 'no-' ) + 'csstransitions' );
+		var documentElement = angular.element( $document[0].documentElement );
+		documentElement.addClass( ( $delegate.supportsCssTransitions ? '' : 'no-' ) + 'csstransitions' );
 
 		return $delegate;
 

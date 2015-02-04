@@ -21,8 +21,9 @@
 		// ****************
 		// Initialization
 		// ****************
-		$document.addClass( ( $delegate.supportsCssTransforms ? '' : 'no-' ) + 'csstransforms' );
-		$document.addClass( ( $delegate.supportsCssTransforms3d ? '' : 'no-' ) + 'csstransforms3d' );
+		var documentElement = angular.element( $document[0].documentElement );
+		documentElement.addClass( ( $delegate.supportsCssTransforms ? '' : 'no-' ) + 'csstransforms' );
+		documentElement.addClass( ( $delegate.supportsCssTransforms3d ? '' : 'no-' ) + 'csstransforms3d' );
 
 		return $delegate;
 

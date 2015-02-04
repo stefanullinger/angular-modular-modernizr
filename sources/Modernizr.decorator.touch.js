@@ -18,7 +18,8 @@
 		// ****************
 		// Initialization
 		// ****************
-		$document.addClass( ( $delegate.supportsTouch ? '' : 'no-' ) + 'touch' );
+		var documentElement = angular.element( $document[0].documentElement );
+		documentElement.addClass( ( $delegate.supportsTouch ? '' : 'no-' ) + 'touch' );
 
 		return $delegate;
 
