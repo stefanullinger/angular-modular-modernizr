@@ -11,10 +11,10 @@
 		// Public
 		// ********
 		var service = {
-			injectElementWithStyles:  injectElementWithStyles,
-			prefixed:                 prefixed,
-			testAllProps:             testPropsAll,
-			testProp:                 testProp
+			injectElementWithStyles  : injectElementWithStyles,
+			prefixed                 : prefixed,
+			testAllProps             : testPropsAll,
+			testProp                 : testProp
 		};
 
 		// ****************

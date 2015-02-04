@@ -6,9 +6,9 @@
 			$provide.decorator( 'Modernizr', decoratorDefinition );
 		}]);
 
-	decoratorDefinition.$inject = [ '$delegate' ];
+	decoratorDefinition.$inject = [ '$delegate', '$document' ];
 
-	function decoratorDefinition( $delegate ) {
+	function decoratorDefinition( $delegate, $document ) {
 		var transitionEndEventNames = {
 			'WebkitTransition' : 'webkitTransitionEnd', // Saf 6, Android Browser
 			'MozTransition'    : 'transitionend',       // only for FF < 15
@@ -26,6 +26,8 @@
 		// ****************
 		// Initialization
 		// ****************
+		$document.addClass( ( $delegate.supportsCssTransitions ? '' : 'no-' ) + 'csstransitions' );
+
 		return $delegate;
 
 

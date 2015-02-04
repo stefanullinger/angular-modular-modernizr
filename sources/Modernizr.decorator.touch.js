@@ -6,9 +6,9 @@
 			$provide.decorator( 'Modernizr', decoratorDefinition );
 		}]);
 
-	decoratorDefinition.$inject = [ '$delegate', 'ModernizrConstant' ];
+	decoratorDefinition.$inject = [ '$delegate', '$document', 'ModernizrConstant' ];
 
-	function decoratorDefinition( $delegate, ModernizrConstant ) {
+	function decoratorDefinition( $delegate, $document, ModernizrConstant ) {
 		// ****************
 		// Public
 		// ****************
@@ -18,6 +18,8 @@
 		// ****************
 		// Initialization
 		// ****************
+		$document.addClass( ( $delegate.supportsTouch ? '' : 'no-' ) + 'touch' );
+
 		return $delegate;
 
 

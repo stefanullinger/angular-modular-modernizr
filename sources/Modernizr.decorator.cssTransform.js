@@ -6,9 +6,9 @@
 			$provide.decorator( 'Modernizr', decoratorDefinition );
 		}]);
 
-	decoratorDefinition.$inject = [ '$delegate' ];
+	decoratorDefinition.$inject = [ '$delegate', '$document' ];
 
-	function decoratorDefinition( $delegate ) {
+	function decoratorDefinition( $delegate, $document ) {
 		// ****************
 		// Public
 		// ****************
@@ -21,6 +21,9 @@
 		// ****************
 		// Initialization
 		// ****************
+		$document.addClass( ( $delegate.supportsCssTransforms ? '' : 'no-' ) + 'csstransforms' );
+		$document.addClass( ( $delegate.supportsCssTransforms3d ? '' : 'no-' ) + 'csstransforms3d' );
+
 		return $delegate;
 
 
