@@ -12,7 +12,7 @@
 		// ****************
 		// Public
 		// ****************
-		$delegate.supportsTouch = supportsTouch;
+		$delegate.supportsTouch = supportsTouch();
 
 
 		// ****************
