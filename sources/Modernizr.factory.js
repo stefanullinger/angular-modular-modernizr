@@ -4,7 +4,9 @@
 		.module( 'angularModularModernizr' )
 		.factory( 'Modernizr', serviceDefinition );
 
-	function serviceDefinition() {
+	serviceDefinition.$inject = [ 'ModernizrConstant' ];
+
+	function serviceDefinition( ModernizrConstant ) {
 		// ********
 		// Public
 		// ********
@@ -18,14 +20,8 @@
 		// ****************
 		// Initialization
 		// ****************
-		var modernizrElementTag    = 'modernizr';
-		var modernizrElement       = document.createElement( modernizrElementTag );
+		var modernizrElement       = document.createElement( ModernizrConstant.ELEMENT_TAG );
 		var modernizrElementStyle  = modernizrElement.style;
-
-		var prefixes       = ' -webkit- -moz- -o- -ms- '.split(' ');
-		var omPrefixes     = 'Webkit Moz O ms';
-		var cssomPrefixes  = omPrefixes.split(' ');
-		var domPrefixes    = omPrefixes.toLowerCase().split(' ');
 
 		return service;
 
@@ -51,13 +47,13 @@
 			if ( parseInt( nodes, 10 ) ) {
 				while ( nodes-- ) {
 					node = document.createElement( 'div' );
-					node.id = testnames ? testnames[ nodes ] : modernizrElementTag + ( nodes + 1 );
-					div.appendChild(node);
+					node.id = testnames ? testnames[ nodes ] : ModernizrConstant.ELEMENT_TAG + ( nodes + 1 );
+					div.appendChild( node );
 				}
 			}
 
-			style = [ '&#173;', '<style id="s', modernizrElementTag, '">', rule, '</style>' ].join( '' );
-			div.id = modernizrElementTag;
+			style = [ '&#173;', '<style id="s', ModernizrConstant.ELEMENT_TAG, '">', rule, '</style>' ].join( '' );
+			div.id = ModernizrConstant.ELEMENT_TAG;
 
 			( body ? div : fakeBody ).innerHTML += style;
 			fakeBody.appendChild( div );
@@ -70,7 +66,7 @@
 				docElement.appendChild( fakeBody );
 			}
 
-			ret = callback(div, rule);
+			ret = callback( div, rule );
 
 			if ( !body ) {
 				fakeBody.parentNode.removeChild( fakeBody );
@@ -129,12 +125,12 @@
 
 		function testPropsAll( prop, prefixed, elem ) {
 			var ucProp = prop.charAt(0).toUpperCase() + prop.slice(1);
-			var props = ( prop + ' ' + cssomPrefixes.join( ucProp + ' ' ) + ucProp ).split(' ');
+			var props = ( prop + ' ' + ModernizrConstant.CSSOM_PREFIXES.join( ucProp + ' ' ) + ucProp ).split(' ');
 
 			if ( is( prefixed, 'string' ) || is( prefixed, 'undefined' ) ) {
 				return testProps( props, prefixed );
 			} else {
-				props = ( prop + ' ' + ( domPrefixes ).join( ucProp + ' ' ) + ucProp ).split(' ');
+				props = ( prop + ' ' + ( ModernizrConstant.DOM_PREFIXES ).join( ucProp + ' ' ) + ucProp ).split(' ');
 				return testDOMProps( props, prefixed, elem );
 			}
 		}

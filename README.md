@@ -23,6 +23,10 @@ Reference the module in your app.
 
 ## Release History
 
+__0.2.0__
+
+  * Added decorator to test for touch support.
+
 __0.1.3__
 
   * Fixed typo in module file.
