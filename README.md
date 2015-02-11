@@ -15,13 +15,17 @@ Reference the module in your app.
 
   angular
     .module( 'someApp', [
-      'angularModularModernizr'
+      'angular.modularModernizr'
     ] );
 
 })();
 ```
 
 ## Release History
+
+__0.4.0__
+
+  * Renamed Angular module to have a consistent pattern with my other modules.
 
 __0.3.2__
 

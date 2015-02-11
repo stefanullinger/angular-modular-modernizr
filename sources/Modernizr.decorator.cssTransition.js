@@ -1,7 +1,7 @@
 (function() {
 
 	angular
-		.module( 'angularModularModernizr' )
+		.module( 'angular.modularModernizr' )
 		.config( [ '$provide', function ( $provide ) {
 			$provide.decorator( 'Modernizr', decoratorDefinition );
 		}]);

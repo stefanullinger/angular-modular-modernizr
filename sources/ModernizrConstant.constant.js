@@ -3,7 +3,7 @@
 	var omPrefixes     = 'Webkit Moz O ms';
 
 	angular
-		.module( 'angularModularModernizr' )
+		.module( 'angular.modularModernizr' )
 		.constant( 'ModernizrConstant', {
 
 			ELEMENT_TAG     : 'modernizr',

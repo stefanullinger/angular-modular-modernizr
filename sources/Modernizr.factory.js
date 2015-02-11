@@ -1,7 +1,7 @@
 (function() {
 
 	angular
-		.module( 'angularModularModernizr' )
+		.module( 'angular.modularModernizr' )
 		.factory( 'Modernizr', serviceDefinition );
 
 	serviceDefinition.$inject = [ 'ModernizrConstant' ];
