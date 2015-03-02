@@ -23,6 +23,10 @@ Reference the module in your app.
 
 ## Release History
 
+__0.4.1__
+
+  * Added list of dependencies to bower.json.
+
 __0.4.0__
 
   * Renamed Angular module to have a consistent pattern with my other modules.
